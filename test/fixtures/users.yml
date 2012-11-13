@@ -1,0 +1,7 @@
+<% 
+  user0 = User.new 
+  user0.password = "hellohello"
+%>
+user0:
+  email: user0@example.com
+  encrypted_password: <%= user0.encrypted_password %>
