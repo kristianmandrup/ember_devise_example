@@ -17,6 +17,7 @@
 //= require ember-data
 //= require ember-forms
 //= require_self
+//= require paths
 //= require ember_devise_example
 EmberDeviseExample = Ember.Application.create();
 //= require_tree .

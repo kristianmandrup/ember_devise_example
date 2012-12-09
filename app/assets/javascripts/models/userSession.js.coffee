@@ -1,7 +1,7 @@
 EmberDeviseExample.UserSession = Ember.Object.extend
-   auth_token : null,
-   urlBase : '/api/v1/tokens',
-   errorMsg : null,
+   auth_token : null
+   urlBase : ApiUrl.tokens_path
+   errorMsg : null
 
    signedIn : (-> 
       return (this.get('auth_token') != null)

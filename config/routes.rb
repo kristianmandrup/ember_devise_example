@@ -6,6 +6,7 @@ EmberDeviseExample::Application.routes.draw do
   scope "/api" do
     scope "/v1" do
       resources :tokens, :only => [:create, :destroy]
+      get "authorization/show"
     end
   end
   

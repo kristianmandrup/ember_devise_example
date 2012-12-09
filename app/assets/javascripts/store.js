@@ -1,4 +1,4 @@
-EmberDeviseExample.Store = DS.Store.extend({
+EmberDeviseExample.store = DS.Store.create({
   revision: 4,
   adapter: DS.RESTAdapter.create()
 });
