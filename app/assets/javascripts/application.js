@@ -13,8 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require handlebars
-//= require ember
-//= require ember-data
+//= require ember.prod
+//= require ember-data.prod
 //= require ember-forms
 //= require_self
 //= require paths

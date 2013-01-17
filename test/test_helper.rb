@@ -2,6 +2,7 @@ ENV["RAILS_ENV"] = "test"
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 require 'capybara/rails'
+require 'ruby-debug'
 
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.(yml|csv) for all tests in alphabetical order.
@@ -13,8 +14,8 @@ class ActiveSupport::TestCase
   # Add more helper methods to be used by all tests here...
 end
 
-Capybara.register_driver :selenium_chrome do |app|
-  Capybara::Selenium::Driver.new(app, :browser => :chrome)
+def json_response
+  ActiveSupport::JSON.decode @response.body
 end
 
 # Transactional fixtures do not work with Selenium tests, because Capybara
@@ -51,6 +52,8 @@ class ActionDispatch::IntegrationTest
 
   def signInEmber(username, password)
     visit('/#/signIn')
+    page.evaluate_script('Ember.run.sync();')
+    sleep 1
     fill_in('email', :with => username)
     fill_in('password', :with => password)
     click_button('Sign In')

@@ -1,0 +1,16 @@
+<h1>Viewing profile for {{email}}</h1>
+<h2>Scores</h2>
+{{#each score in scores}}
+    <div class="summary">{{score.what}}
+        {{#can score.allow.destroy}}
+            <a href="#" class="destroy">Destroyable</a>  
+        {{/can}}
+        {{#can score.allow.read}}
+            <a href="#" class="read">Readable</a>  
+        {{/can}}
+        {{#can score.allow.edit}}
+            <a href="#" class="edit">Editable</a>  
+        {{/can}}
+    </div>
+{{/each}}
+

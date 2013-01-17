@@ -1,12 +1,15 @@
 EmberDeviseExample::Application.routes.draw do
+  resources :scores
+
   devise_for :users
 
   get "home/show"
 
   scope "/api" do
     scope "/v1" do
-      resources :tokens, :only => [:create, :destroy]
-      get "authorization/show"
+      resources :tokens, only: [:create, :destroy]
+      resource :authorization, only: [:show]
+      resources :users, only: [:show]
     end
   end
   

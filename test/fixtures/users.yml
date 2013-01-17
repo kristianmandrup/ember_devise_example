@@ -5,3 +5,11 @@
 user0:
   email: user0@example.com
   encrypted_password: <%= user0.encrypted_password %>
+  
+<% 
+  user1 = User.new 
+  user1.password = "hellohello1"
+%>
+user1:
+  email: user1@example.com
+  encrypted_password: <%= user1.encrypted_password %>

@@ -1,6 +1,5 @@
 EmberDeviseExample.Score = DS.Model.extend
-  id:         DS.attr('number')
-  score:      DS.attr('string')
-  workout_id: DS.attr('number')
-  comments:   DS.attr('string')
-  
+  'when':       DS.attr('string')
+  what:         DS.attr('string')
+  user:         DS.belongsTo('EmberDeviseExample.User')
+

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  when: 2012-12-08
+  what: I did some really hard work
+  user: user0
+
+two:
+  when: 2012-12-09
+  what: This was a light workout
+  user: user0
