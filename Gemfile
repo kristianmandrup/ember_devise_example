@@ -5,7 +5,7 @@ gem 'rails', '3.2.8'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'pg'
+gem "sqlite3", "~> 1.3.7"
 
 gem 'devise'
 gem 'cancan'
@@ -27,7 +27,7 @@ group :development, :test do
   gem 'capybara'
   gem 'konacha'
   gem 'poltergeist'
-  gem 'ruby-debug19'
+  # gem 'ruby-debug19'
   gem 'launchy'
 end
 
